@@ -1,0 +1,25 @@
+{
+    "name": "keer/geesys-pdf-generator",
+    "description": "PDF generator for Geesys driver document",
+    "type": "library",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "keer",
+            "email": "mayor.stopko@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "dompdf/dompdf": "^0.8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GeesysPdfWriter\\": "src/",
+            "GeesysTests\\": "tests/"
+        }
+    }
+}

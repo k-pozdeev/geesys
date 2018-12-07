@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        @font-face {
+            font-family: "Arial Unicode MS";
+            src: url("./arialuni.ttf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: "Arial Unicode MS", "Arial", sans-serif;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: normal;
+            vertical-align: baseline;
+        }
+        {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            padding: 3em;
+        }
+
+        .strong {
+            font-weight: bold;
+        }
+
+        .logo {
+            width: 40%;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid black;
+            border-spacing: 0;
+        }
+
+        h1 {
+            font-size: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="logo.png"/>
+    <table>
+        <tbody>
+            <tr>
+                <td><p>Geesys DTS</p></td>
+                <td><p>Поручение №{{ invoiceNumber }} к Заявке №{{ orderNumber }}</p></td>
+                <td><p>От {{ date }}</p></td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Реквизиты сторон</h1>
+    <table>
+        <tbody>
+        <tr>
+            <td>
+                <p><span class="strong">Заказчик:</span> {{ customerName }}, ИНН {{ customerINN }} КПП {{ customerKPP }}, {{ customerAddress }}</p>
+                <p><span class="strong">Агент:</span> {{ agentName }}, ИНН {{ agentINN }} КПП {{ agentKPP }}, {{ agentAddress }}</p>
+                <p><span class="strong">Перевозчик:</span> {{ carrierName }}, ИНН {{ carrierINN }} КПП {{ carrierKPP }}, {{ carrierAddress }}</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
